@@ -16,25 +16,27 @@
             --font-display: "Fraunces", Georgia, serif;
             --font-sans: "DM Sans", system-ui, sans-serif;
         }
+        .filtro { @apply px-4 py-2 rounded-full border border-cafe/30 text-sm font-medium hover:bg-naranja hover:border-naranja hover:text-cafe; }
+        .filtro.activo { @apply bg-naranja text-white border-cafe; }
     </style>
 </head>
 
-<body >
+<body class="bg-white text-cafe font-sans">
 
     <!-- Header Estructura -->
-    <header>
-        <div>
-            <a href="#inicio"><img src="logo.png" alt="Luz Clarita"></a>
+    <header class="sticky top-0 z-30 bg-cafe text-white">
+        <div class="max-w-6xl mx-auto px-4 py-5 flex items-center gap-4 justify-between">
+            <a href="#inicio" class="text-2xl font-display font-extrabold ">Luz Clarita</a>
 
-            <nav>
-               <a href="#productos">Productos</a>
-               <a href="#nosotros">Nosotros</a>
-               <a href="#ubicacion">Ubicación</a>
+            <nav class="hidden md:flex gap-6 text-sm">
+               <a href="#productos" class="hover:text-naranja">Productos</a>
+               <a href="#nosotros" class="hover:text-naranja">Nosotros</a>
+               <a href="#ubicacion" class="hover:text-naranja">Ubicación</a>
             </nav>
 
-            <button>
+            <button id="abrirCarrito" aria-label="Abrit Carrito" class="relative p-2 rounded-full hover:text-naranja focus-visible:outline-2 focus-visible:outline-arena">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l3-8H5.4M7 13L5.4 5M7 13l-2 4h12M9 21a1 1 0 100-2 1 1 0 000 2zm8 0a1 1 0 100-2 1 1 0 000 2z"/></svg>
-                <span>0</span>
+                <span id="contador" class="absolute -top-0.5 -right-0.5 min-w-5 h-5 px-1 rounded-full bg-arena text-cafe text-xs font-bold grid place-items-center">0</span>
             </button>
         </div>
     </header>
@@ -120,11 +122,7 @@
             <button id="cotizar">Cotizar en WhatsApp</button>
         </div>
     </aside>
-
-    <style type="text/tailwindcss">
-         .filtro { @apply px-4 py-2 rounded-full border border-azul/30 text-sm font-medium hover:bg-azul/5; }
-         .filtro.activo { @apply bg-azul text-white border-azul; }
-    </style>
+    
 
     <script src="script.js"></script>
         
