@@ -30,7 +30,7 @@
 
             <nav class="hidden md:flex gap-6 text-sm">
                <a href="#productos" class="hover:text-naranja">Productos</a>
-               <a href="#nosotros" class="hover:text-naranja">Nosotros</a>
+               <a href="#diferencias" class="hover:text-naranja">Nosotros</a>
                <a href="#ubicacion" class="hover:text-naranja">Ubicación</a>
             </nav>
 
@@ -98,7 +98,7 @@
             <p class="mb-1"><strong>Dirección:</strong> Tu dirección aquí, San José, Costa Rica</p>
             <p class="mb-1"><strong>Horario:</strong> Lunes a sábado, 6:00 a. m. a 6:00 p. m.</p>
             <p class="mb-1"><strong>WhatsApp:</strong> 71142542</p>
-            <a href="cancela.html" class="inline-block text-sm underline mt-6 ">¿Necesitas cancelar una compra?</a>
+            <a href="cancelar.html" class="inline-block text-sm underline mt-6 ">¿Necesitas cancelar una compra?</a>
         </div>
         <iframe title="Mapa de Ubicacion" loading="lazy" class="w-full h-72  border-0 rounded-xl"
             src="https://www.google.com/maps?q=San+Jose+Costa+Rica&output=embed"></iframe>
@@ -139,16 +139,16 @@
 
 
     <!-- Carrito de Compras(Panel lateral) -->
-    <div id="fondo"></div>
-    <aside id="carrito" aria-label="Carrito de Compras">
-        <div>
-            <h2>Tu Carrito</h2>
-            <button id="cerrarCarrito" aria-label="Cerrar Carrito">X</button>
+    <div id="fondo" class="hidden fixed inset-0 bg-black/50 z-40"></div>
+    <aside id="carrito" aria-label="Carrito de Compras" class="fixed top-0 right-0 h-full w-full max-w-sm bg-white z-50 translate-x-full transition-transform duration-300 flex flex-col" >
+        <div class="flex items-center justify-between p-4 border-b">
+            <h2 class="font-display text-xl font-extrabold">Tu Carrito</h2>
+            <button id="cerrarCarrito" aria-label="Cerrar Carrito" class="text-2xl px-2">✕</button>
         </div>
-        <div id="itemsCarrito"></div>
-        <div>
-            <div><span>Total estimado:</span><span id="totalCarrito">₡0</span></div>
-            <button id="cotizar">Cotizar en WhatsApp</button>
+        <div id="itemsCarrito" class="flex-1 overflow-y-auto p-4 space-y-4"></div>
+        <div class="p-4 border-t">
+            <div class="flex justify-between font-bold mb-3"><span>Total estimado:</span><span id="totalCarrito">₡0</span></div>
+            <button id="cotizar" class="w-full bg-green-600 hover:bg-green-700 disabled:opacity-40 disabled:cursor-not-allowed text-white font-bold py-3 rounded-full">Cotizar en WhatsApp</button>
         </div>
     </aside>
     
