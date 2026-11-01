@@ -78,16 +78,16 @@
 
     <!--PRODUCTOS  -->
 
-    <section id="productos">
-        <div>
-            <h2>Nuestros Productos</h2>
-            <div id="filtros">
+    <section id="productos" class="bg-arena/30 py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="font-display text-3xl font-extrabold mb-6">Nuestros Productos</h2>
+            <div id="filtros" class="flex flex-wrap gap-2 mb-8">
                 <button data-cat="todos" class="filtro">Todos</button>
                 <button data-cat="panaderia" class="filtro">Panaderia</button>
                 <button data-cat="reposteria" class="filtro">Reposteria</button>
                 <button data-cat="bocadillos" class="filtro">Bocadillos</button>
             </div>
-            <div id="listaProductos"></div>
+            <div id="listaProductos" class="grid grid-cols-2 md:grid-cols-4 gap-4"></div>
         </div>
     </section>
       
