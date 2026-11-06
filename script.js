@@ -23,3 +23,14 @@ const productos = [
     { id: 11, nombre: "Mini pizzas (6 unidades)", categoria: "bocadillos", precio: 4500, emoji: "🍕" },
     { id: 12, nombre: "Bandeja de bocadillos surtidos", categoria: "bocadillos", precio: 15000, emoji: "🥗" }
 ];
+
+//Utilidades
+
+const $ = (id) => document.getElementById(id);  
+const fmt = (n) => "₡" + n.toLocaleString("es-CR");
+
+// Carrito
+let carrito = {};
+try{carrito = JSON.parse(localStorage.getItem("carrito")) || {};}catch(e){carrito = {};}
+
+//Productos y filtros 
