@@ -34,3 +34,22 @@ let carrito = {};
 try{carrito = JSON.parse(localStorage.getItem("carrito")) || {};}catch(e){carrito = {};}
 
 //Productos y filtros 
+
+function pintarProductos(cat = "todos"){
+    const lista = cat === "todos" ? productos : productos.filter((p) => p.categoria === cat);
+
+    $("listaProductos").innerHTML =  lista.map((p) => `
+        <article class="rounded-xl border border-cafe/15 bg-white p-4 flex flex-col">
+            <div class="text-6xl text-center py-4" aria-hidden="true">${p.emoji}</div>
+            <p class="text-xs text-cafe/70 font-medium">${nombresCategoria[p.categoria]}</p>
+            <h3 class="font-bold leading-snug flex-1">${p.nombre}</h3>
+            <p class="mt-2 font-semibold">${fmt(p.precio)}</p>
+            <button data-add="${p.id}" class="mt-3 bg-cafe text-white text-sm font-semibold py-2 rounded-full hover:bg-naranja hover:text-cafe">Agregar</button>
+    </article>`).join("");
+
+    // Marca como activo solo el boton de la categoria elegida
+    document.querySelectorAll(".filtro").forEach((b)=>
+    b.classList.toggle("activo",b.dataset.cat === cat));}
+
+pintarProductos();
+
