@@ -49,7 +49,14 @@ function pintarProductos(cat = "todos"){
 
     // Marca como activo solo el boton de la categoria elegida
     document.querySelectorAll(".filtro").forEach((b)=>
-    b.classList.toggle("activo",b.dataset.cat === cat));}
+    b.classList.toggle("activo", b.dataset.cat === cat));
+}
 
-pintarProductos();
+//Muestra los productos de la categoria seleccionada al hacer click en el boton correspondiente
+$("filtros").addEventListener("click", (e) => {
+    const b = e.target.closest(".filtro");
+    if (b) pintarProductos(b.dataset.cat);
+});
+
+
 
