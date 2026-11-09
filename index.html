@@ -26,7 +26,7 @@
     <!-- Header Estructura -->
     <header class="sticky top-0 z-30 bg-cafe text-white">
         <div class="max-w-6xl mx-auto px-4 py-5 flex items-center gap-4 justify-between">
-            <a href="#inicio"><img src="/src/lgr.png" alt="Luz Clarita" class="h-20 w-25"></a>
+            <a href="#inicio"><img src="/src/img/lgr.png" alt="Luz Clarita" class="h-20 w-25"></a>
 
             <nav class="hidden md:flex gap-6 text-sm">
                <a href="#productos" class="hover:text-naranja">Productos</a>
@@ -42,23 +42,42 @@
     </header>
 
     <!---INICIO-->
+    
+    <section id="inicio" class="relative h-[70vh] min-h-96 overflow-hidden bg-cafe text-white" 
+    aria-roledescription="carrusel" aria-label="Fotos de nuestra panaderia">
 
-    <section id="inicio" class="bg-cafe text-white">
-        <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-8 items-center">
-            <div>
-                <h1 class="font-display text-2xl md:text-5xl font-extrabold leading-tight">Pan hecho artesanalmente, sin productos químicos</h1>
-                <p class="mt-4 text-lg text-white/80 max-w-md">Panaderia, Reposteria y Bocadillos horneados cada dia</p>
-                <a href="#productos" class="inline-block mt-8 bg-arena text-cafe font-bold px-6 py-3 rounded-full hover:bg-naranja">Ver Productos</a>
+    <!--- imagenes apiladas -->
+    <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacitiy-100">
+        style="background-image: url('/src/img/slide1.jpg');"</div>
 
-            </div>
-            <div class="text-[9rem] md:text-[12rem] text-center leading-none select-none" aria-hidden="true">🥖</div>
-            
-        </div>
+    <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacitiy-100">
+        style="background-image: url('/src/img/slide2.jpg');"</div>
+
+    <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacitiy-100">
+        style="background-image: url('/src/img/slide3.jpg');"</div>
+
+    <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacitiy-100">
+        style="background-image: url('/src/img/slide4.jpg');"</div>
+    
+
+    <!--- CAPA OSCURA PARA QUE EL TEXTO SE PUEDA LEER   -->
+    <div class="absolute inset-0 bg-cafe/50"></div>
+
+    <!--- Texto -->
+    
+     <div class="relative z-10 max-w-6xl mx-auto px-4 h-full flex flex-col justify-center">
+        <h1 class="font-display text-3xl md:text-5xl font-extrabold leading-tight max-w-2xl">Pan hecho artesanalmente</h1>
+        <p class="mt-4 text-lg text-white/70 max-w-md">Panadería, Repostería y Bocadillos horneados cada día</p>
+        <a href="#productos" class="inline-block self-start mt-8 bg-arena text-cafe font-bold px-6 py-3 rounded-full hover:bg-naranja">Ver Productos</a>
+    </div>
+
     </section>
+
+
 
     <!--DIFERENCIAS-->
 
-    <section id="diferencias" class="max-w-6xl mx-auto px-4 py-16">
+    <section id="diferencias" class="max-w-6xl mx-auto px-4 py-24">
         <h2 class=" font-display text-3xl font-extrabold mb-8">Nuestras Caracteristicas</h2>
         <div class="grid sm:grid-cols-3 gap-6">
             <div class="border-l-4 border-naranja pl-4">
@@ -112,7 +131,7 @@
     <footer class="bg-cafe text-arena">
         <div class="max-w-6xl mx-auto px-4 py-12 grid gap-8 sm:grid-cols-3">
             <div>
-                <img src="/src/lgr.png" alt="Luz Clarita" class="h-20 w-25">
+                <img src="/src/img/lgr.png" alt="Luz Clarita" class="h-20 w-25">
                 <p class="mt-2 text-sm max-w-xs text-arena/70">Pan artesanal, sin preservantes, horneado cada día</p>
             </div>
 
